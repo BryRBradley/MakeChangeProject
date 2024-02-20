@@ -1,7 +1,6 @@
 package com.skilldistilery.makechange;
 
 import java.util.Scanner;
-import java.math.RoundingMode;
 
 public class CashRegister {
 	public static void main(String[] args) {
@@ -14,13 +13,11 @@ public class CashRegister {
 		do {
 			System.out.println("Would you like to make a transaction? Enter Y/N ");
 			String yN = kb.next();
-			yN.equalsIgnoreCase(yN);
 			if (yN.equals("N") || yN.equals("n")) {
 				System.out.println("Have a nice day");
 				kb.close();
 				break;
-			} 
-			else if (yN.equals("y")) {
+			} else if (yN.equalsIgnoreCase("y")) {
 
 				System.out.println("Cash_POS is ready for transactions");
 				System.out.println();
